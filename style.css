@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevents side-scrolling during box animation */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem;
+}
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+
+/* Hero Section with graphic.jpg */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('graphic.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn {
+    background: #e67e22;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d35400;
+    transform: scale(1.05);
+}
+
+/* Services Section */
+.services { 
+    padding: 80px 20px; 
+    text-align: center; 
+    background-color: #ffffff; 
+}
+
+/* 1. Scrolling Heading Effect (Left to Right & Back) */
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    animation: bounceHeadline 6s linear infinite alternate;
+}
+
+@keyframes bounceHeadline {
+    from { transform: translateX(-25%); }
+    to { transform: translateX(25%); }
+}
+
+/* 2. Grid for the 6 Boxes */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 3. VIOLET BACKGROUND BOXES */
+.card {
+    /* Rich Violet Gradient */
+    background: linear-gradient(135deg, #8e44ad 0%, #6c5ce7 100%); 
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3);
+    text-align: center;
+    cursor: pointer;
+    
+    /* Animation initial state: Hidden and to the left */
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* White text for the Violet cards */
+.card h3 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hover Effect for Violet boxes */
+.card:hover { 
+    transform: translateY(-12px); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover h3 {
+    color: #e67e22; /* Text turns orange on hover */
+}
+
+/* Footer Image Section */
+.bottom-image-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.responsive-footer-img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 15px;
+}

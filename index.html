@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Hub | Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">INNOVATIVE HUB</div>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Your Vision, Our Design</h1>
+        <p>Wedding Cards • Instagram Branding • Business Identity</p>
+        <a href="https://wa.me/919944420160" class="btn">WhatsApp Me</a>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        
+        <div class="service-grid">
+            <div class="card"><h3>Wedding Cards</h3></div>
+            <div class="card"><h3>Instagram Posts</h3></div>
+            <div class="card"><h3>Logo Design</h3></div>
+            <div class="card"><h3>Business Cards</h3></div>
+            <div class="card"><h3>Photo Editing</h3></div>
+            <div class="card"><h3>Resume Design</h3></div>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center; padding: 60px 20px; background: #fff;">
+        <h2>Contact Us</h2>
+        <p>Email: smartonlineworks111@gmail.com</p>
+        <p>Phone: +91 99444 20160</p>
+    </section>
+
+    <section class="bottom-image-section">
+        <img src="boy.jpg" alt="Graphic Design Process" class="responsive-footer-img">
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // When visible, the card moves to its final box position
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateX(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Setup each card to start hidden on the left
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = "0";
+            card.style.transform = "translateX(-100px)";
+            card.style.transition = "all 0.8s ease-out";
+            observer.observe(card);
+        });
+    </script>
+
+</body>
+</html>
