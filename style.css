@@ -9,35 +9,55 @@ body {
 }
 
 /* Navigation */
+/* --- Base Styles --- */
 nav {
-  display: flex;
-  justify-content: space-between; /* Pushes logo left and links right */
-  align-items: center;
-  background: #2c3e50; /* Dark background */
-  padding: 10px 5%; 
-  color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    padding: 10px 5%;
 }
 
-nav ul {
-  display: flex; /* Makes links sit in a row instead of a vertical list */
-  list-style: none; /* Removes the bullet points */
-  margin: 0;
-  padding: 0;
+#nav-logo {
+    width: 200px; /* Big size for Computer */
+    height: auto;
 }
 
-nav ul li {
-  margin-left: 30px; /* Adds space between each link */
+.nav-links {
+    display: flex;
+    list-style: none;
 }
 
-nav ul li a {
-  color: white; /* Ensures text is visible against the dark bar */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
+.nav-links li {
+    margin-left: 20px;
 }
 
-nav ul li a:hover {
-  color: #ff7b00; /* Optional: logo-orange color when you hover */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Phone View Fix (Media Query) --- */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Stacks logo and links vertically */
+        text-align: center;
+    }
+
+    #nav-logo {
+        width: 150px; /* Smaller logo for phones */
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        padding: 0;
+        margin-top: 5px;
+    }
+
+    .nav-links li {
+        margin: 0 10px; /* Balances the links in the center */
+    }
 }
 
 /* Hero Section with graphic.jpg */
