@@ -10,31 +10,49 @@ body {
 
 /* Navigation */
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #2c3e50;
-    color: white;
-    padding: 1rem;
+  display: flex;
+  justify-content: space-between; /* Pushes logo left and links right */
+  align-items: center;
+  background: #2c3e50; /* Dark background */
+  padding: 10px 5%; 
+  color: white;
 }
 
-nav ul { display: flex; list-style: none; }
-nav ul li { margin-left: 20px; }
-nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+nav ul {
+  display: flex; /* Makes links sit in a row instead of a vertical list */
+  list-style: none; /* Removes the bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 30px; /* Adds space between each link */
+}
+
+nav ul li a {
+  color: white; /* Ensures text is visible against the dark bar */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #ff7b00; /* Optional: logo-orange color when you hover */
+}
 
 /* Hero Section with graphic.jpg */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('graphic.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
+    /* Replace 'graphic.jpg' with your actual filename */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('graphic.jpg');
+    background-size: cover;      /* Makes the image fill the whole area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    height: 100vh;               /* Ensures the section has height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    color: white;                /* Makes your text white for contrast */
 }
 
 .btn {
