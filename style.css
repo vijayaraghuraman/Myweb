@@ -11,55 +11,23 @@ body {
 /* Navigation */
 /* --- Base Styles --- */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #2c3e50;
-    padding: 10px 5%;
-}
-
-#nav-logo {
-    width: 200px; /* Big size for Computer */
-    height: auto;
+  display: flex;
+  justify-content: space-between; /* Pushes logo left, links right */
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #1a252f; /* Matching your dark theme */
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 20px;
+  display: flex;
+  gap: 20px; /* Space between Services and Contact */
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
-
-/* --- Phone View Fix (Media Query) --- */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column; /* Stacks logo and links vertically */
-        text-align: center;
-    }
-
-    #nav-logo {
-        width: 150px; /* Smaller logo for phones */
-        margin-bottom: 10px;
-    }
-
-    .nav-links {
-        padding: 0;
-        margin-top: 5px;
-    }
-
-    .nav-links li {
-        margin: 0 10px; /* Balances the links in the center */
-    }
-}
-
 /* Hero Section with graphic.jpg */
 .hero {
     /* Replace 'graphic.jpg' with your actual filename */
