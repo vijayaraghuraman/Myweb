@@ -10,23 +10,32 @@ body {
 
 /* Navigation */
 /* --- Base Styles --- */
-nav {
-  display: flex;
-  justify-content: space-between; /* Pushes logo left, links right */
-  align-items: center;
-  padding: 10px 5%;
-  background-color: #1a252f; /* Matching your dark theme */
-}
+/* This code runs only on mobile phones */
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Stacks the links underneath the logo */
+        padding: 15px 0;
+        text-align: center;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 20px; /* Space between Services and Contact */
-}
+    .logo img {
+        width: 140px !important; /* Makes the logo smaller so text fits */
+        margin-bottom: 10px;
+    }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+    .nav-links {
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 0 15px; /* Centers the links and gives them room */
+    }
+
+    .nav-links a {
+        font-size: 16px; /* Slightly smaller text for mobile */
+    }
 }
 /* Hero Section with graphic.jpg */
 .hero {
