@@ -14,43 +14,86 @@
                 <img src="logo.jpg" alt="Innovative Hub Logo" style="width: 200px; height: auto;">
             </a>
         </div>
-
         <ul class="nav-links">
             <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    
-    
-    
 
     <section class="hero">
         <h1>Your Vision, Our Design</h1>
         <p>Wedding Cards • Instagram Branding • Business Identity</p>
         <a href="https://wa.me/919944420160?text=Hello%20Creative%20Hub%2C%20I%20came%20across%20your%20website%20and%20am%20interested%20in%20your%20professional%20graphic%20design%20services.%20Please%20let%20me%20know%20the%20next%20steps." class="btn" target="_blank">
-   WhatsApp Me
-</a>
+            WhatsApp Me
+        </a>
     </section>
 
     <section id="services" class="services">
         <h2>Our Services</h2>
-        
         <div class="service-grid">
-            <div class="card"><h3>Wedding Cards</h3></div>
-            <div class="card"><h3>Instagram Posts</h3></div>
-            <div class="card"><h3>Logo Design</h3></div>
-            <div class="card"><h3>Business Cards</h3></div>
-            <div class="card"><h3>Photo Editing</h3></div>
-            <div class="card"><h3>Resume Design</h3></div>
-            
+            <div class="card">
+                <h3>Graphic Design</h3>
+                <p>Posters, Flyers, Brochures, Business Cards, Banners & Marketing Materials.</p>
+            </div>
+            <div class="card">
+                <h3>Logo & Identity</h3>
+                <p>Unique Logo Creation, Brand Guidelines, Complete Identity Packages.</p>
+            </div>
+            <div class="card">
+                <h3>Social Media</h3>
+                <p>Instagram Posts, Ad Creatives, Reels Covers, Promotional Graphics.</p>
+            </div>
+            <div class="card">
+                <h3>DTP Services</h3>
+                <p>Professional Typesetting, Book Layout Design, Print-Ready Files.</p>
+            </div>
+            <div class="card">
+                <h3>Video Editing</h3>
+                <p>Promotional Videos, Social Media Reels, Intro Videos, Motion Graphics.</p>
+            </div>
+            <div class="card">
+                <h3>Photo Editing</h3>
+                <p>Professional Retouching, Image Manipulation, and Enhancements.</p>
+            </div>
         </div>
     </section>
 
-    <section id="contact" style="text-align: center; padding: 60px 20px; background: #fff;">
-        <h2>Contact Us</h2>
-        <p>Email: smartonlineworks111@gmail.com</p>
-        <p>Phone: +91 99444 20160</p>
+    <section id="about" class="about-vision">
+        <div class="container">
+            <div class="vision-box">
+                <h2>Our Vision</h2>
+                <p>To become a trusted creative partner for businesses by delivering designs that inspire, communicate, and convert.</p>
+            </div>
+            <div class="why-us">
+                <h2>Why Choose Innovative Hub?</h2>
+                <ul>
+                    <li>✨ Creative & Innovative Concepts</li>
+                    <li>🎨 Elegant & Professional Designs</li>
+                    <li>✅ High-Quality Output</li>
+                    <li>⏰ On-Time Delivery</li>
+                    <li>🤝 Client-Focused Approach</li>
+                </ul>
+            </div>
+        </div>
     </section>
+
+    <footer class="main-footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Innovative Hub</h3>
+                <p>Innovative Hub is a professional digital design studio delivering creative, elegant, and impactful visual solutions for brands in the digital world.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>📧 smartonlineworks111@gmail.com</p>
+                <p>📞 +91 99444 20160</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Innovative Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <section class="bottom-image-section">
         <img src="boy.jpg" alt="Graphic Design Process" class="responsive-footer-img">
@@ -60,14 +103,12 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // When visible, the card moves to its final box position
                     entry.target.style.opacity = "1";
                     entry.target.style.transform = "translateX(0)";
                 }
             });
         }, { threshold: 0.1 });
 
-        // Setup each card to start hidden on the left
         document.querySelectorAll('.card').forEach(card => {
             card.style.opacity = "0";
             card.style.transform = "translateX(-100px)";
