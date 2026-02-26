@@ -251,3 +251,17 @@ body {
     z-index: 100;
 }
 .whatsapp-float img { width: 35px; margin-top: 13px; }
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Distance from bottom */
+    right: 20px;  /* Distance from right */
+    width: 60px;  /* Control the size here */
+    height: 60px;
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+.whatsapp-icon img {
+    width: 100%;
+    height: auto;
+}
