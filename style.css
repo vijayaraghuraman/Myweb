@@ -228,3 +228,26 @@ body {
     margin-top: 10px;
     line-height: 1.4;
 }
+
+.process { padding: 80px 20px; text-align: center; background: #fff; }
+.process-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px; }
+.step { flex: 1; min-width: 250px; max-width: 350px; }
+.step-num { 
+    width: 50px; height: 50px; background: #8e44ad; color: white; 
+    border-radius: 50%; display: flex; align-items: center; 
+    justify-content: center; margin: 0 auto 20px; font-weight: bold; font-size: 1.2rem;
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 40px; /* Opposite side of your Back to Top button */
+    background-color: #25d366;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+.whatsapp-float img { width: 35px; margin-top: 13px; }
