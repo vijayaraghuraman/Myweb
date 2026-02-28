@@ -264,3 +264,49 @@ body {
     }
 }
 
+
+
+h1 {
+  /* This moves the text to the middle of the screen */
+  text-align: center;
+  
+  /* Use 'block' instead of 'inline-block' so it takes up the full width to center itself */
+  display: block;
+  
+  /* Keeps your blue and orange gradient design */
+  background: linear-gradient(to right, #00ADEF 0%, #00ADEF 50%, #FF7E00 50%, #FF7E00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  /* Matches the bold look in your screenshot */
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 3rem; 
+  margin-top: 50px;
+}
+
+
+/* This targets h2, h3, and any other sub-headings you add later */
+h2, h3, h4, h5, h6 {
+  /* Sharp color split at exactly 50% */
+  background: linear-gradient(90deg, #00ADEF 50%, #FF7E00 50%);
+  
+  /* Clips the colors to the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  /* Centers the text on the website */
+  display: block;
+  text-align: center;
+  
+  /* Design style to match your Innovative Hub logo */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 20px 0; /* Adds spacing between sections */
+}
+
