@@ -310,3 +310,55 @@ h2, h3, h4, h5, h6 {
   margin: 20px 0; /* Adds spacing between sections */
 }
 
+.nav-links li a {
+    font-weight: bold; /* Makes the text bold */
+    text-decoration: none; /* Removes the underline */
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+/* Styling "Services" and half of "About" in Blue */
+.nav-links li:nth-child(1) a, 
+.nav-links li:nth-child(2) a {
+    color: #00ADEF;
+}
+
+/* Styling "Contact" and the other part in Orange */
+.nav-links li:nth-child(3) a {
+    color: #FF7E00;
+}
+
+/* Hover effect to make them pop */
+.nav-links li a:hover {
+    filter: brightness(1.2);
+    text-decoration: underline;
+}
+
+
+
+
+
+.nav-links {
+    list-style: none; /* This removes the three dots */
+    padding: 0;       /* This removes the default left indentation */
+    margin: 0;
+}
+
+.nav-links li a {
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+/* Keeping your color vision for the links */
+.nav-links li:nth-child(1) a, 
+.nav-links li:nth-child(2) a {
+    color: #00ADEF; /* Blue for Services and About */
+}
+
+.nav-links li:nth-child(3) a {
+    color: #FF7E00; /* Orange for Contact */
+}
