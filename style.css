@@ -355,10 +355,10 @@ h2, h3, h4, h5, h6 {
 
 /* Keeping your color vision for the links */
 .nav-links li:nth-child(1) a, 
-.nav-links li:nth-child(2) a {
+.nav-links li:nth-child(3) a {
     color: #00ADEF; /* Blue for Services and About */
 }
 
-.nav-links li:nth-child(3) a {
+.nav-links li:nth-child(2) a {
     color: #FF7E00; /* Orange for Contact */
 }
