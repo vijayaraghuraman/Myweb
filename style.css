@@ -19,11 +19,12 @@ body {
     /* ... and everything else inside this @media block ... */
 
     /* --- Optimized Navigation & Logo --- */
+/* --- Optimized Bigger & Fully Responsive Header --- */
 .main-header-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 10px 5%; /* Slightly less padding to fit a bigger logo */
     background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
@@ -31,15 +32,17 @@ body {
     z-index: 1000;
 }
 
-/* This ensures the logo stays within its container */
+/* Container for the logo */
 .logo-box {
-    max-width: 70%; /* Prevents the logo container from taking over the screen */
+    flex: 1; /* Allows the logo area to grow */
+    max-width: 60%; 
 }
 
 .nav-logo {
-    max-width: 100%; /* Important: Image will shrink to fit the screen */
-    height: auto;    /* Keeps proportions correct */
-    max-height: 85px; /* Sets a nice size for desktop */
+    /* Height on PC - increased to 120px */
+    max-height: 120px; 
+    width: auto;      /* Keeps the logo's shape perfect */
+    max-width: 100%;  /* Ensures it shrinks if the screen gets too small */
     display: block;
 }
 
@@ -51,22 +54,24 @@ body {
     padding: 0;
 }
 
-/* --- Mobile Specific Fix --- */
+/* --- Mobile Specific Fix (Bigger Logo & No Swipe) --- */
 @media screen and (max-width: 768px) {
     .main-header-nav {
-        flex-direction: column;
+        flex-direction: column; /* Stacks logo above links */
         gap: 15px;
         text-align: center;
-        padding: 10px;
-    }
-
-    .nav-logo {
-        max-height: 60px; /* Slightly smaller on mobile to save space */
-        margin: 0 auto;   /* Centers the logo */
+        padding: 20px 10px;
     }
 
     .logo-box {
-        max-width: 90%; /* Allows logo to be wider on mobile if needed */
+        max-width: 100%; /* Lets the logo take full width of mobile screen */
+        width: 100%;
+    }
+
+    .nav-logo {
+        /* Height on Mobile - increased to 100px */
+        max-height: 100px; 
+        margin: 0 auto;    /* Centers the logo perfectly */
     }
 }
 
