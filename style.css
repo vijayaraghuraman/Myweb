@@ -18,10 +18,57 @@ body {
 
     /* ... and everything else inside this @media block ... */
 
-    .logo img {
-        width: 140px !important; /* Makes the logo smaller so text fits */
-        margin-bottom: 10px;
+    /* --- Optimized Navigation & Logo --- */
+.main-header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* This ensures the logo stays within its container */
+.logo-box {
+    max-width: 70%; /* Prevents the logo container from taking over the screen */
+}
+
+.nav-logo {
+    max-width: 100%; /* Important: Image will shrink to fit the screen */
+    height: auto;    /* Keeps proportions correct */
+    max-height: 85px; /* Sets a nice size for desktop */
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Mobile Specific Fix --- */
+@media screen and (max-width: 768px) {
+    .main-header-nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 10px;
     }
+
+    .nav-logo {
+        max-height: 60px; /* Slightly smaller on mobile to save space */
+        margin: 0 auto;   /* Centers the logo */
+    }
+
+    .logo-box {
+        max-width: 90%; /* Allows logo to be wider on mobile if needed */
+    }
+}
 
     .nav-links {
         justify-content: center;
@@ -438,6 +485,12 @@ h2, h3, h4, h5, h6 {
     .nav-logo {
         height: 65px;
     }
+}
+
+header img, .logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 
