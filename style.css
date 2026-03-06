@@ -477,6 +477,40 @@ header img, .logo {
     display: block;
 }
 
+.floating-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px; /* Adjust size as needed */
+    z-index: 2000;
+    transition: transform 0.3s ease;
+}
+
+.floating-logo:hover {
+    transform: scale(1.1); /* Slightly grows when touched/hovered */
+}
+
+.scroll-container {
+    width: 100%;
+    background: #f8f8f8; /* Or use your brand's blue/orange */
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+    font-weight: bold;
+    color: #007bff; /* Use your brand blue */
+    font-size: 1.2rem;
+}
+
+@keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
 
 
 
