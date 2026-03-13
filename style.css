@@ -515,6 +515,14 @@ header img, .logo {
     to { transform: translateX(-100%); }
 }
 
+.logo-img {
+    height: auto; 
+    width: 250px; /* Increase this value */
+    max-height: 80px; /* Ensure the container isn't squashing it */
+    object-fit: contain; /* Keeps the proportions perfect */
+}
+
+
 
 
 
