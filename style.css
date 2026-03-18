@@ -517,7 +517,7 @@ header img, .logo {
 
 .logo-img {
     height: auto; 
-    width: 250px; /* Increase this value */
+    width: 350px; /* Increase this value */
     max-height: 80px; /* Ensure the container isn't squashing it */
     object-fit: contain; /* Keeps the proportions perfect */
 }
