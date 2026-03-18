@@ -489,6 +489,10 @@ header img, .logo {
     z-index: 2000;
     transition: transform 0.3s ease;
 }
+.floating-logo img {
+    width: 100%; /* Ensures the image fills the div */
+    display: block;
+}
 
 .floating-logo:hover {
     transform: scale(1.1); /* Slightly grows when touched/hovered */
